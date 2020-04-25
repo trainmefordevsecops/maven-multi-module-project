@@ -18,7 +18,8 @@
         <jacoco.version>0.8.4</jacoco.version>
         <!--sonar.jacoco.reportPaths>${project.basedir}/../target/jacoco.xml</sonar.jacoco.reportPaths>
         <sonar.jacoco.itReportPath>${project.basedir}/../target/jacoco-it.xml</sonar.jacoco.itReportPath-->
-        <aggregate.report.dir>${project.basedir}/../target/jacoco.xml</aggregate.report.dir>
+        <aggregate.report.dir>${project.basedir}/../target/jacoco.exec</aggregate.report.dir>
+        <aggregate.itreport.dir>${project.basedir}/../target/jacoco.exec</aggregate.itreport.dir>
         <sonar.language>java</sonar.language>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
     </properties>
@@ -48,7 +49,7 @@
                         </goals>
                         <configuration>
                             <append>true</append>
-                            <destFile>${aggregate.report.dir}</destFile>
+                            <destFile>${aggregate.itreport.dir}</destFile>
                         </configuration>
                     </execution>
                 </executions>
